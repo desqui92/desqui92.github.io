@@ -1,0 +1,112 @@
+.c-section-two{
+    display:flex;
+    flex-direction:column;
+    width:90%;
+    margin:auto;
+    margin-top:100px;
+    align-items:center;
+
+    &__title{
+        margin:auto;
+        width:1000px;
+        font-size:38px;
+        color:white;
+        text-decoration:underline;
+        text-decoration-color:rgb(62,73,122); 
+        
+        @include tablet{
+            width:135px;
+        }
+    }
+}
+
+.c-slider-container{
+    overflow-x: hidden;
+    overflow-y:hidden;
+    width:1050px;
+    margin:auto;
+    margin-top:50px;
+
+    @include tablet{
+        width:350px;
+    }
+
+    @include phone{
+        width:350px;
+    }
+
+    &__slider{
+    width:100%;
+    transition:all 0.3s;
+    }
+
+    &__slides{
+        width:1050px;
+        height:350px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:nowrap;
+        transition:all 0.3s;
+        grid-gap:62px;
+        /*transform:translateX(-300px);*/
+
+        @include tablet{
+            width:350px;
+        }
+
+        @include phone{
+            width:350px;
+        }
+    }
+    &__slide-two, &__image-two{
+        width:288px;
+        height:288px;
+        border-radius:25px;
+        margin:0px;
+        transition: all 0.3s;
+    }
+
+    &__slide-two{
+        /*margin-right:12px;*/
+    }
+
+    &__image-two:hover{
+            transform:rotate(5deg) scale(1.05);
+    }
+
+    &__arrows{
+        position:absolute;
+        display:flex;
+        width:1050px;
+        height:20px;
+        margin-top:-175px;
+        justify-content:space-between;
+        align-items: center;
+
+        @include tablet{
+            width:350px;
+        }
+
+        @include phone{
+            width:350px;
+        }
+    }
+
+    &__right-arrow, &__left-arrow{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        background-color:rgba(0,0,0,0.7);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        outline: none;
+        border:none;
+    }
+
+    &__arrow{
+        width:32px;
+        height:32px;
+    }
+}
